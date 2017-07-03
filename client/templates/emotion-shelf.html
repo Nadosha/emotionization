@@ -1,0 +1,54 @@
+<template name="filesShelf">
+	<div class="container" style="padding-top: 60px">
+		<h1>Emotions timeline</h1>
+		<hr>
+	</div>
+    {{#if Template.subscriptionsReady}}
+    	<div class="container-fluid">
+    		<div id='tiles'>
+
+    			{{#if ifAnyEmotion}}
+    				{{#each emotions}}
+    					{{> fileItem}}
+    				{{/each}}
+    				{{else}}
+    				<h1 style="color: #bdc3c7; text-align: center">Your emotions are empty.<br>
+    				 	<a href="{{pathFor route='addFile'}}"> Add emotion</a>
+    				</h1>
+    			{{/if}}
+    		</div>
+            <button id="loadMore" class="funbtn funbtn-green funbtn-block" style="margin-top: 20px; margin-bottom: 20px">Load more</button>
+    	</div>
+
+        {{else}}
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    {{/if}}
+</template>
+
+<template name="fileItem">
+	<div class="col-sm-2 tile">
+		<div class="thumbnail">
+            <a href="{{pathFor route='fileDetails'}}" style="min-height: 100px">
+                {{#if imagesSome.length}}
+                    {{#each imagesSome}}
+                        <figure>
+                            {{#if fileURL this}}
+                                <img src="{{fileURL this}}" class='inline-img img-responsive' alt="name">
+                            {{else}}
+                                <img src="/img/placeholder.png" class='inline-img'>
+                            {{/if}}
+                        </figure>
+                    {{/each}}
+                    {{else}}
+                    <img src="/img/placeholder.png" class='inline-img'>
+                {{/if}}
+            </a>
+
+     		<div class="caption">
+        		<h1>{{title}}</h1>
+        		<h2>{{description}}</h2>
+        		<small>{{fullMonthAndYear pubDate}}</small>
+      		</div>
+    	</div>		
+	</div>
+</template>

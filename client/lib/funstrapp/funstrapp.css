@@ -1,0 +1,556 @@
+/*  UI library for Funtick
+	Author: Andrey Nadosha;
+	License: MIT;
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+	.funblock {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.landing-page-layout {
+		background: white;
+	}
+
+		.login-page-layout{
+			height: auto;
+			min-height: 100%;
+			padding-top: 40px;
+			background: #00b7ea;
+			background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%);
+			background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%);
+			background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+			background-size: cover;
+     		background-repeat:no-repeat;
+		}
+/* Login form */
+		.signup-container  {
+			max-width: 500px;
+			text-align: center;
+			margin: 0 auto;
+
+		}
+		.signup-block {
+			background: #fff;
+			width: 100%;
+			height: 100%;
+			padding-top: 40px;
+			border-top: 10px solid #FFCA3D;
+		}
+			.signup-block img {		
+				padding: 0px;
+				margin: 0px;
+				position: relative;
+			}
+		.signup-text {
+			padding: 0px;
+			margin-top: -20px;
+		}
+			.signup-text h3{
+				color: #BABABA;
+				font-family: 'Fredoka One', cursive;
+			}
+			.signup-text mark.yellow{
+				color: #FFCA3D ;
+				background: none;
+			}
+			.signup-text mark.green{
+				color: #54cc8c ;
+				background: none;
+			}
+		.signup-form {
+			width: 60%;
+			margin: 60px auto;
+		}
+		.signup-link {
+			display: block;
+			margin-top: 10px;
+			text-align: right;
+
+		}
+		.button-group {
+			margin-top: 20px;
+		}
+			.button-group h3 {
+				color: #BABABA;
+
+			}
+		.inline-input {
+			width: 100%;
+			margin-top: 10px;
+			position: relative;
+		}
+			.inline-input .input-group {
+				width: 49%;
+				display: inline-block;
+			}
+			.inline-input .input-group .input-item {
+				margin-top: 10px;
+			}
+			
+			@media (max-width: 768px) {
+				.inline-input .input-group {
+					width: 100%;
+				}
+			}
+			.inline-input label {
+				display: block;
+				margin-bottom: -5px; 
+			}
+		.input-group_inline {
+			width: 100%;
+			position: relative;
+		}
+
+		.input-group {
+			width: 100%;
+			margin-top: 10px;
+		}
+			.input-group input[type='checkbox'] {
+				margin-left: 10px;
+			}
+			
+			.input-item {
+				position: relative;
+				color:  #BABABA;
+				border-radius: 3px;
+			}
+				.input-item input{
+					width: 100%;
+					height: 40px;
+					font-size: 14px;
+					text-indent: 50px;
+					padding-right: 25px;
+    				outline: none;
+    				background: #FAF5F0;
+    				border: none;
+    				border-radius: 3px;
+				}
+					.input-white input, .input-white select  {
+						background: #ffffff !important;
+					}
+				.input-item select {
+					width: 100%;
+					height: 40px;
+					font-size: 14px;
+					text-indent: 50px;
+					padding-right: 25px;
+					outline: none;
+    				border: transparent;
+    				-moz-appearance:none;
+    				-webkit-appearance: none;
+ 					box-shadow: none;
+ 					background-image: none;
+ 					cursor: pointer;
+ 					background: #FAF5F0 url("/img/select-gray.png") no-repeat right;
+					background-size: 20px;
+				}
+				.input-item .input-error {
+					position: absolute;
+					color: #E65547;
+					top: 12px;
+					right: 7px;
+				} 
+				.input-item .input-helper {
+					position: absolute;
+					background: #FFCA3D;
+					color: white;
+					height: 40px;
+					width: 40px;
+					padding-top: 10px;
+					text-align: center;
+					font-size: 20px;
+					border-top-left-radius: 3px;
+					border-bottom-left-radius: 3px;
+				}
+				.input-item .funbtn-helper {
+					position: absolute;
+					background: transparent;
+					color: #BABABA;
+					right: 0px;
+					top: 2px;
+					cursor: pointer;
+					outline: none;
+				}
+					.input-item .funbtn-helper:hover {
+						color: #9C9696;
+					}
+				.input-item .input-check {
+					position: absolute;
+					color: #54cc8c;
+					top: 12px;
+					right: 7px;
+				}
+				.input-item  textarea {
+					width: 100%;
+					min-height: 40px;
+					max-height: 200px;
+					font-size: 14px;
+					padding-right: 25px;
+    				outline: none;
+    				background: #FAF5F0;
+    				border: none;
+    				border-radius: 3px;
+				}
+			.accept-text {
+				text-align: left;
+				background: #EFF8E2;
+				margin-top: 5px;
+				padding-left: 5px;
+				border-left: 4px solid #54cc8c;
+			}
+			.warning-text {
+				display: block;
+				text-align: left;
+				background: #FFFCEB;
+				margin-top: 5px;
+				padding-left: 5px;
+				border-left: 4px solid #FDC777;
+			}
+			.warning-text strong {
+				color: #E65547;
+			}
+
+
+.input-file {
+	position: relative;
+  	overflow: hidden;
+  	width: 100%;
+  	border: 1px solid #E6CFB7;
+  	cursor:pointer;
+  	background-color:#FFCA3D;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #FEBC0B;
+	color:#ffffff;
+	margin-top: 10px;
+	font-size:17px;
+	padding:10px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 1px #5b6178;
+}
+.input-file:hover {
+	background-color:#FEBC0B;
+}
+
+.input-file input[type=file] {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+  	top: 0;
+  	right: 0;
+  	margin: 0;
+  	padding: 0;
+  	opacity: 0;
+  	filter: alpha(opacity=0);
+  	cursor:pointer;
+  	overflow: hidden;
+}
+		@media(max-width: 768px) {
+			.container-fluid {
+				padding-top: 10px;
+				padding-bottom: 20px;
+			}
+      		.signup-container {
+				width: 96%;
+				text-align: center;
+				margin: 0 auto;
+			}
+			.signup-form {
+				width: 90%;
+				margin-top: 60px;
+				margin-bottom: 20px;
+			}
+		}
+
+
+/* Buttons for FUNtick */
+
+.funbtn {
+	display: inline-block;
+  	padding: 6px 12px;
+  	margin-bottom: 0;
+  	font-size: 17px;
+  	font-weight: normal;
+  	line-height: 1.42857143;
+  	text-align: center;
+  	white-space: nowrap;
+  	vertical-align: middle;
+  	-ms-touch-action: manipulation;
+  	    touch-action: manipulation;
+  	cursor: pointer;
+  	-webkit-user-select: none;
+  	   -moz-user-select: none;
+  	    -ms-user-select: none;
+  	        user-select: none;
+  	background-image: none;
+  	border: 1px solid transparent;
+  	border-radius: 3px;
+  	cursor: pointer;
+
+}
+a.funbtn:hover  {
+	text-decoration: none;
+	color: white;
+}
+
+.funbtn-block {
+	width: 100%;
+}
+.funbtn-big {
+	padding: 10px 31px !important;
+}
+	.funbtn-green {
+		background-color:#54cc8c;
+		color:#ffffff;
+	} 
+		.funbtn-green:hover{
+			background-color: #50c278;
+		}
+	.funbtn-yellow {
+		background-color:#FEBC0B;
+		color:#ffffff;
+	}
+		.funbtn-yellow:hover {
+			background-color:#FEBC0B;
+		}
+	.funbtn-blue {
+		background-color: #39B3D7;
+		color:#ffffff;
+	}
+		.funbtn-blue:hover {
+			background-color: #33a1bf;
+		}
+	.funbtn-fb {
+		background-color:#7892c2;
+		color:#ffffff;
+		text-shadow:0px 1px 1px #283966;
+		border-color: #4e6096;
+
+	}
+		.funbtn-fb:hover {
+			background-color:#476e9e;
+		}
+	.funbtn-tw {
+		background-color:#33bdef;
+		border-radius:3px;
+		background-color:  #057fd0;
+		color:#ffffff;
+		text-shadow:0px 1px 1px #5b6178;
+	}
+		.funbtn-tw:hover {
+			background-color:#019ad2;
+		}
+	.funbtn-uncolor {
+		background-color: #ffffff !important;
+		color: #B8B8B8;
+		outline: 0;
+	}
+
+.fun-close {
+  float: right;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .45;
+}
+
+.fun-close:hover,
+.fun-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .6;
+}
+button.fun-close {
+  -webkit-appearance: none;
+  	width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #f5f5f5;
+    overflow: hidden;
+    background: #BBBBBB;
+    box-shadow: 0 0 3px gray;
+}
+
+/* Modal stylesheet */
+
+.funmodal-header {
+	background: #FFCA3D;
+	padding: 5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.funmodal-body {
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 38px;
+	padding-left: 35px;
+	padding-right: 35px;
+	text-align: center;
+	color: white;
+} .funmodal-body h1{
+	margin: 0;
+}
+.funmodal-footer {
+	padding: 25px 15px 25px 15px;
+	text-align: center;
+}
+
+.funmodal-yellow {
+	background-color: #FFCA3D;
+}
+.funmodal-green {
+	background-color: #54CC8C;
+}
+.funmodal-blue {
+	background-color: #39B3D7;
+}
+.funmodal-red {
+
+}
+
+/* Arrows for div*/
+
+/*Arrow directions */
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 5px solid black;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	margin: 0 auto;
+	border-top: 15px solid #f00;
+}
+	/* arrow specifications */
+	.arrow-down.arrow-yellow {
+		border-top: 15px solid #FFCA3D;
+	}
+	.arrow-down.arrow-green {
+		border-top: 15px solid #54CC8C;
+	}
+	.arrow-down.arrow-blue {
+		border-top: 15px solid #39B3D7;
+	}
+
+.arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	
+	border-left: 60px solid green;
+}
+
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	
+	border-right:10px solid blue; 
+}
+
+
+/* Input select */
+.funselect-btn {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding-left: 5px; 
+	border: transparent;
+	border-radius: 0px;
+	 -moz-border-radius: 0px;
+	 -webkit-border-radius: 0px;
+    border-bottom-right-radius:  3px !important;
+    border-top-right-radius: 3px !important;
+    -webkit-border-bottom-right-radius: 3px !important;
+    -webkit-border-top-right-radius: 3px !important;
+     -moz-border-bottom-right-radius: 3px !important;
+     -moz-border-top-right-radius: 3px !important;
+    background-size: 20px;
+}
+	.funselect-blue {
+		background: #39B3D7 url("/img/select-white.png") no-repeat right;
+		background-size: 20px;
+	}
+	.funselect-default {
+		background: url("/img/select-gray.png") no-repeat right;
+		background-size: 20px;
+	}
+.funselect-btn select{
+	color: white;
+	height: 40px;
+	font-size: 14px;
+	padding-right: 25px;
+    outline: none;
+    background: transparent;
+    border: transparent;
+    -moz-appearance:none;
+    -webkit-appearance: none;
+ 	box-shadow: none;
+ 	background-image: none;
+ 	cursor: pointer;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+
+/* Blocks of content */
+.media-block {
+	margin-top: 10px;
+}
+.map-modal {
+	margin-top: 10px;
+	width: 100%; 
+	height: 400px; 
+	margin-bottom: -10px;
+}
+
+.funbtn-file_upload {
+	position: relative;
+    overflow: hidden;
+}
+.funbtn-file_upload input[type=file] {
+	position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+
+
+
+
+

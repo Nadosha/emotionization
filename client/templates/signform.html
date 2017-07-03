@@ -1,0 +1,101 @@
+<template name='loginPage'>
+	{{> yield}}		
+</template>
+
+<template name="login">
+<div style="background: #16a085; height: 100%; width: 100%; padding-top: 50px">
+	<div class="signup-container">
+		<div class="signup-block ">
+			<i class="fa fa-bookmark fa-brand fa-2x" aria-hidden="true"></i>
+			<div class="signup-text">
+				<h3 class="hidden-xs">Emotions<mark class="yellow">SHELF</mark><mark class="green">!</mark></h3>
+			</div>
+			<div class="signup-form" >
+				<form class="login" id="login">
+					<div class="input-group" id="email-input">
+						<div class="input-item">
+							<span class="fa fa-at input-helper"></span>
+							<input id="email-input" type="email" name="email" placeholder="Your email">
+							<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+							<i id="input-success" class="fa fa-check input-check hidden" ></i>
+
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-item">
+							<span class="fa fa-lock input-helper"></span>
+							<input type="password" name="password" placeholder="Your password">
+							<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+							<i id="input-success" class="fa fa-check input-check hidden" ></i>
+						</div>
+					</div>
+					<div class="button-group">
+						<button class="funbtn funbtn-green funbtn-block funbtn-big" type="submit">Login</button>
+						<span class="signup-link">
+							<a href="{{pathFor route='registr'}}" >I don't have account</a>
+						</span>
+						
+					</div>
+				</form>
+			</div>
+		</div>	
+	</div>
+</div>
+</template>
+
+
+<template name="registr">
+<div style="background: #16a085; height: 100%; width: 100%; padding-top: 50px">
+	<div class="signup-container ">
+		<div class="signup-block ">
+			<i class="fa fa-bookmark fa-brand fa-2x" aria-hidden="true"></i>
+			<div class="signup-text">
+				<h3 class="hidden-xs">Emotions<mark class="yellow">SHELF</mark><mark class="green">!</mark></h3>
+			</div>
+
+			<div class="signup-form" >
+				<form class="registr" id="registr">
+					<div class="input-group" id="name-input">
+						<div class="input-item">
+							<span class="fa fa-user input-helper"></span>
+							<input type="text" name="userName" placeholder="Name" >
+							<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+							<i id="input-success" class="fa fa-check input-check hidden" ></i>
+						</div>
+					</div>
+					<div class="input-group" id="lastn-name-input">
+						<div class="input-item">
+							<span class="fa fa-user input-helper"></span>
+							<input id="lName" type="text" name="userLastName" placeholder="Last name" >
+							<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+							<i id="input-success" class="fa fa-check input-check hidden" ></i>
+						</div>
+					</div>
+					<div class="input-group" id="email-input">
+						<div class="input-item">
+							<span class="fa fa-at input-helper"></span>
+							<input type="email" name="email" placeholder="Your email" >
+							<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+							<i id="input-success" class="fa fa-check input-check hidden" ></i>
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-item">
+							<span class="fa fa-lock input-helper"></span>
+							<input type="password" name="password" placeholder="Your password" >
+							<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+							<i id="input-success" class="fa fa-check input-check hidden" ></i>
+						</div>
+					</div>
+					<div class="button-group">
+						<button class="funbtn funbtn-green funbtn-block funbtn-big" type="submit">Sign up!</button>
+						<span class="signup-link">
+						<a href="{{pathFor route='login'}}">I have an account! Login</a>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</template>

@@ -1,0 +1,22 @@
+<template name="fileUploader">
+    <div class="form-group">
+        {{#if label}}
+            <label class="control-label">
+                {{label}}:
+            </label>
+        {{/if}}
+
+        {{#if uploadingProcess.isUploaded}}
+            <div style="position: relative">
+                {{> loaderWithProgress percentage=uploadingProcess.percentage}}
+            </div>
+        {{/if}}
+
+        <div id="dropzone-files" class="input-group image-addform" style="margin-top: 35px">
+            <span class="funbtn funbtn-yellow funbtn-block funbtn-file_upload" >
+                drop or click to upload <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                <input id='fileInput' name="file" type="file" multiple>
+            </span>
+        </div>
+    </div>
+</template>

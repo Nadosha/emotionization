@@ -1,0 +1,69 @@
+<template name="addEmotion">
+
+	<div class="container" style="padding-top: 60px"> 
+		<div class="row first-block">
+		{{#if isEditEmotion}}
+            <h1>Edit emotion</h1>
+			{{else}}
+            <h1>Add new emotion</h1>
+		{{/if}}
+			<hr>
+		</div>
+		<div class="row second-block">
+			<form id="emotionForm">
+        {{#if Template.subscriptionsReady}}
+				<div class="col-sm-4">
+					<!--Image cover uploader-->
+                    <div class='img-group'>
+                        {{#each uloadedImg}}
+                            <figure>
+                                {{#if fileURL this}}
+                                    <button name="removeImg" class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                    <img src="{{fileURL this}}" class='inline-img'>
+                                {{else}}
+                                    <img src="/img/placeholder.png" class='inline-img'>
+                                {{/if}}
+                            </figure>
+                        {{/each}}
+                    </div>
+                    {{> fileUploader}}
+				</div>
+				<div class="col-sm-8">
+					<div class="input-group" id="book-name-input">
+			  			<label for="title">Title & description</label>
+			  			<div class="input-item">
+			  				<span class="fa fa-font input-helper"></span>
+			  				<input id="title" type="text" name="title" placeholder="Title for your emotion" value="{{emotion.title}}">
+			  				<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+			  				<i id="input-success" class="fa fa-check input-check hidden" ></i>
+			  			</div>
+  					</div>
+  					<div class="input-group" id="book-author-input">
+			  			 <div class="input-item">
+    		              	<textarea id='descritpion' type="text" value="{{ emotion.description }}" class="user-input--description" rows='3' placeholder="Tell us something about your emotion"></textarea>
+    		              	<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+			  				<i id="input-success" class="fa fa-check input-check hidden" ></i>
+    		            </div>
+  					</div>
+  					<div class="inline-input">
+  						<div class="input-group" id="book-pubpate-input">
+			  				<label for="emotion-pubpate">When emotion was happened</label>
+			  				<div class="input-item">
+			  					<span class="fa fa-calendar input-helper"></span>
+			  					<input id="emotion-pubpate" type="date" name="pubpate" value="{{inputFormat emotion.pubDate }}">
+			  					<span id="input-error" class="fa fa-exclamation-triangle input-error hidden" ></span>
+			  					<i id="input-success" class="fa fa-check input-check hidden" ></i>
+			  				</div>
+  						</div>
+
+  					</div>
+  					<div class="button-group">
+  						<button type="submit" class="funbtn funbtn-green funbtn-block funbtn-big" id="submitEmotion">Save Emotion</button>
+                        <h5 style="color: #95a5a6">Will be removed after 7 days after save</h5>
+  					</div>
+				</div>
+        {{/if}}
+			</form>
+		</div>
+	</div>
+</template>

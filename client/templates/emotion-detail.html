@@ -1,0 +1,40 @@
+<template name="fileDetails">
+	<div class="container" style="padding-top: 60px">
+		<h1>Emotion details</h1>
+		<hr>
+		<div class="row">
+			{{#if Template.subscriptionsReady}}
+			    {{#with emotion}}
+			    <div class="col-sm-4">
+                    {{#if imagesSome.length}}
+                        {{#each imagesSome}}
+                            <figure>
+                                {{#if fileURL this}}
+                                    <a href="{{pathFor route='fileDetails'}}">
+                                        <img src="{{fileURL this}}" class='inline-img img-responsive' alt="name">
+                                    </a>
+                                {{else}}
+                                    <img src="/img/placeholder.png" class='inline-img img-responsive'>
+                                {{/if}}
+                            </figure>
+                        {{/each}}
+                    {{else}}
+                        <img src="/img/placeholder.png" class='inline-img img-responsive'>
+                    {{/if}}
+			    </div>
+
+
+			    <div class="col-sm-8">
+			    	<button type="button" class="close" id="removeEmotion"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></button>
+			    	<h1>{{title}} <small>{{fullMonthAndYear pubDate}}</small></h1>
+			    	<h3>{{description}}</h3>
+			    	<p><strong>Published: </strong> {{fullMonthAndYear pubDate}}</p>
+			    	<a href="{{pathFor route='editFile'}}" class="funbtn funbtn-block funbtn-blue" id="editEmotion">Edit</a>
+			    </div>
+                {{/with}}
+            {{else}}
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+			{{/if}}
+		</div>
+	</div>
+</template>

@@ -1,0 +1,7 @@
+<template name="loaderWithProgress">
+    <div class="progress">
+        <div class="progress-bar" id="fileLoadProcess" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" >
+            {{#if percentage}}{{percentage}}%{{/if}}<span class="sr-only"> Complete</span>
+        </div>
+    </div>
+</template>
