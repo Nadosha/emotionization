@@ -1,11 +1,10 @@
 Template.addEmotion.onCreated(function() {
-	Session.setDefault('imageFileObjID', undefined);
+	Session.setDefault('imgObj', undefined);
 	let self = this;
 	let emotionId =  Router.current().params._id;
 
-
   	self.autorun(function() {
-  		self.subscribe('covers', Session.get('imageFileObjID'));
+  		self.subscribe('covers', Session.get('fileObj'));
     	self.subscribe('singleEmotion', emotionId);
   	});
 });

@@ -47,6 +47,12 @@ Template.fileItem.onRendered(function() {
 
         $grid.masonry( 'reloadItems' );
     });
+	let $grid = $('#tiles').masonry({
+        itemSelector: '.tile',
+        transitionDuration: 5
+	});
+
+    $grid.masonry( 'reloadItems' );
 
     Emotions.find().observe({
         added: function() {
