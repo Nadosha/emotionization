@@ -7,6 +7,11 @@ Build with:
 3. Iron:router for routing
 4. MongoDB
 
+For run project:
+1. Install MeteorJS ```curl https://install.meteor.com/ | sh```
+2. Install npm dependencies ```meteor npm install --save```
+3.
+
 
 Features:
 
